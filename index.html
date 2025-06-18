@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ASCII Dungeon Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-title">ASCII DUNGEON EXPLORER </div>
+        </div>
+        <div class="game-container">
+            <div class="dungeon-container">
+                <div class="dungeon-map" id="dungeon">Loading dungeon...</div>
+            </div>
+            <div class="info-panel">
+                <div class="info-section">
+                    <div class="info-title">CONTROLS</div>
+                    <div>WASD / Arrows: Move<br>R: New Dungeon<br>ESC: Reset<br>Space: Rest</div>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">LEGEND</div>
+                    <div class="legend-item"><span class="player">@</span><span>Player</span></div>
+                    <div class="legend-item"><span class="wall">█</span><span>Wall</span></div>
+                    <div class="legend-item"><span class="floor">·</span><span>Floor</span></div>
+                    <div class="legend-item"><span class="door">+</span><span>Door</span></div>
+                    <div class="legend-item"><span class="treasure">$</span><span>Gold</span></div>
+                    <div class="legend-item"><span class="health-potion">♥</span><span>Health</span></div>
+                    <div class="legend-item"><span class="mana-potion">♦</span><span>Mana</span></div>
+                    <div class="legend-item"><span class="enemy">M</span><span>Monster</span></div>
+                    <div class="legend-item"><span class="stairs">&lt;&gt;</span><span>Stairs</span></div>
+                </div>
+                <div class="info-section">
+                    <div class="info-title">STATUS</div>
+                    <div>Lvl: <span id="level">1</span> | Gold: <span id="gold">0</span><br>
+                        HP: <span id="health">100</span>/<span id="maxHealth">100</span>
+                        <div class="health-bar"><div class="health-fill" id="healthFill" style="width: 100%"></div></div>
+                        MP: <span id="mana">50</span>/<span id="maxMana">50</span>
+                        <div class="mana-bar"><div class="mana-fill" id="manaFill" style="width: 100%"></div></div>
+                        Kills: <span id="kills">0</span> | Score: <span id="score">0</span>
+                    </div>
+                </div>
+                <button class="new-game-btn" onclick="game.newGame()">New Dungeon</button>
+                <div class="message-log" id="messageLog">
+                    <div class="message">Welcome to the dungeon!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
